@@ -1,7 +1,7 @@
 pipeline{
-  agent any 
+  agent slave1
   stages{
-    stage('project9'){
+    stage('project9 Team5.group3:Pipeline'){
       parallel{     
         stage('Gerald Agbonye'){
           when {
@@ -19,7 +19,7 @@ pipeline{
             echo "TODO"
           }
         }
-   stage('Pere'){
+   stage('Le Pere'){
     when {
            branch 'main'
             }
@@ -27,8 +27,7 @@ pipeline{
             echo "TODO"
         }
     }
-    
-        stage("Other Members") {
+   stage("Other Members") {
             when {
                 not {
                     anyOf {
@@ -41,10 +40,7 @@ pipeline{
            steps {
                echo "Other members not coming to group meetings"
             }
-        }
-    
-    
-    
+        } 
     stage('Odile Domingo'){
         when {
           branch 'feature'
@@ -57,31 +53,4 @@ pipeline{
    }
   }
 }
-
-
-pipeline {
-    agent any
-    stages {
-        stage('Main Branch Deploy Code') {
-            when {
-                branch 'main'
-            }
-            steps {
-                sh 'echo "Building Artifact from Main branch"'
- 
-                sh 'echo "Deploying Code from Main branch"'
-            }
-        }
-        stage('Develop Branch Deploy Code') {
-            when {
-                branch 'develop'
-            }
-            steps {
-                sh 'echo "Building Artifact from Develop branch"'
-                sh 'echo "Deploying Code from Develop branch"'
-           }
-        }
-    }
-}
-
 
