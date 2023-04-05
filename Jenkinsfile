@@ -35,6 +35,17 @@ pipeline{
             echo "TODO"
         }
     }
+ stage('John Forson'){
+            when {
+    branch 'feature'
+            }
+           steps {
+               echo "TODO"
+            }
+        }
+            stage("Other Members") {
+        when {
+    }
         stage("Other Members") {
             when {
                 not {
@@ -44,21 +55,12 @@ pipeline{
                         branch 'feature'
                     }
                 }
-           }
-           steps {
-               echo "Other members not coming to group meetings"
-            }
-        } 
-    stage('John Forsan'){
-        when {
-          branch 'feature'
-            }
-    	steps{
-    		echo "TODO"
-    	}
+          }
+        steps{
+                echo "TODO"
+        }
      }
     }
    }
   }
 }
-
