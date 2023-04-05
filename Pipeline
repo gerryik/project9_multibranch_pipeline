@@ -27,8 +27,7 @@ pipeline{
             echo "TODO"
         }
     }
-    
-        stage("Other Members") {
+   stage("Other Members") {
             when {
                 not {
                     anyOf {
