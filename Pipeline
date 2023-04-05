@@ -1,0 +1,30 @@
+ipeline{
+  agent any
+  stages{
+    stage('Gerald Agbonye Branch'){
+      when{     
+        branch 'geraldagbonye'
+        }
+          steps{
+            sh '/var/lib/jenkins/workspace/ec2ststscrpit.sh'
+          }
+        }
+        stage('Pretei Lemo Branch'){         
+      when{     
+        branch 'preteilemo'
+        }
+         steps{
+            echo "actions2"
+          }
+        }
+    
+    stage('Odile Domingo Branch'){  
+      when{     
+        branch 'odiledomingo'
+        }
+    	steps{
+    		echo "echo codebuild stage"
+    	}
+    }
+  }
+}
