@@ -1,11 +1,11 @@
 pipeline{
   agent any 
   stages{
-    stage('project9 Team5.group3:Pipeline'){
+    stage('project9'){
       parallel{     
         stage('Gerald Agbonye'){
           when {
-                branch 'main'
+                branch 'feature'
             }
           steps{
             sh '/var/lib/jenkins/script/project9grp5q1scrpit.sh'
@@ -13,21 +13,29 @@ pipeline{
         }
         stage('Pretei Lemo'){
           when {
-                branch 'develop'
+                branch 'feature'
             }
           steps{
             echo "TODO"
           }
         }
-   stage('Le Pere'){
+   stage('Odile Domingo'){
     when {
-           branch 'main'
+           branch 'feature'
             }
        steps{
             echo "TODO"
         }
     }
-   stage("Other Members") {
+  stage('Le Pere'){
+    when {
+           branch 'feature'
+            }
+       steps{
+            echo "TODO"
+        }
+    }
+        stage("Other Members") {
             when {
                 not {
                     anyOf {
@@ -41,7 +49,7 @@ pipeline{
                echo "Other members not coming to group meetings"
             }
         } 
-    stage('Odile Domingo'){
+    stage('John Forsan'){
         when {
           branch 'feature'
             }
