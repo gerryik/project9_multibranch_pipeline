@@ -19,7 +19,7 @@ pipeline{
             echo "TODO"
           }
         }
-   stage('Pere'){
+   stage('Le Pere'){
     when {
            branch 'main'
             }
@@ -41,10 +41,7 @@ pipeline{
            steps {
                echo "Other members not coming to group meetings"
             }
-        }
-    
-    
-    
+        } 
     stage('Odile Domingo'){
         when {
           branch 'feature'
@@ -56,32 +53,6 @@ pipeline{
     }
    }
   }
-}
-
-
-pipeline {
-    agent any
-    stages {
-        stage('Main Branch Deploy Code') {
-            when {
-                branch 'main'
-            }
-            steps {
-                sh 'echo "Building Artifact from Main branch"'
- 
-                sh 'echo "Deploying Code from Main branch"'
-            }
-        }
-        stage('Develop Branch Deploy Code') {
-            when {
-                branch 'develop'
-            }
-            steps {
-                sh 'echo "Building Artifact from Develop branch"'
-                sh 'echo "Deploying Code from Develop branch"'
-           }
-        }
-    }
 }
 
 
