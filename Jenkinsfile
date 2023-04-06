@@ -1,8 +1,8 @@
 pipeline{
-  agent any 
+  agent any
   stages{
     stage('project9'){
-      parallel{     
+      parallel{
         stage('Gerald Agbonye'){
           when {
                 branch 'feature'
@@ -34,20 +34,17 @@ pipeline{
        steps{
             echo "TODO"
         }
-    }
+    } 
  stage('John Forson'){
-            when {
+            when {      
     branch 'feature'
             }
            steps {
-               echo "TODO"
+               echo "Other members not coming to group meetings"
             }
         }
             stage("Other Members") {
         when {
-    }
-        stage("Other Members") {
-            when {
                 not {
                     anyOf {
                         branch 'master';
@@ -64,3 +61,4 @@ pipeline{
    }
   }
 }
+
