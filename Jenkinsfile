@@ -16,7 +16,7 @@ pipeline{
                 branch 'feature'
             }
           steps{
-            echo "TODO"
+             sh '/var/lib/jenkins/script/lemorscript.sh'
           }
         }
    stage('Odile Domingo'){
@@ -24,7 +24,7 @@ pipeline{
            branch 'feature'
             }
        steps{
-            echo "TODO"
+             sh '/var/lib/jenkins/script/odilescript.sh'
         }
     }
   stage('Le Pere'){
@@ -35,7 +35,7 @@ pipeline{
             echo "TODO"
         }
     } 
- stage('John Forson'){
+ stage('Henry Forson'){
             when {      
     branch 'feature'
             }
