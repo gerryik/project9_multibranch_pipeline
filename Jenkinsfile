@@ -35,7 +35,7 @@ pipeline{
             echo "TODO"
         }
     } 
- stage('John Forson'){
+ stage('Henry Forson'){
             when {      
     branch 'feature'
             }
