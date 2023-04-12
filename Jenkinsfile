@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('project9'){
       parallel{
-        stage('Gerald Agbonye'){
+        stage('Gerald  Agbonye'){
           when {
                 branch 'feature'
             }
