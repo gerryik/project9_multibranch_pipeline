@@ -1,7 +1,7 @@
 pipeline{
   agent any
   stages{
-    stage('project9'){
+    stage('project 9'){
       parallel{
         stage('Gerald Agbonye'){
           when {
